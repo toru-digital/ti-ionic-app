@@ -84,8 +84,7 @@ gulp.task('sass', function(done) {
   gulp.src('./scss/ionic.app.scss')
     .pipe(sass())
     .on('error', sass.logError)
-    .pipe(gulp.dest('./www/css/'))
-    .pipe(minifyCss({
+    .pipe (minifyCss({
       keepSpecialComments: 0
     }))
     .pipe(rename({ extname: '.min.css' }))
@@ -93,8 +92,20 @@ gulp.task('sass', function(done) {
     .on('end', done);
 });
 
+gulp.task('ti-sass', function(done) {
+  gulp.src('./scss/ti-ionic.scss')
+    .pipe(sass())
+    .on('error', sass.logError)
+    .pipe(minifyCss({
+      keepSpecialComments: 0
+    }))
+    .pipe(rename({ extname: '.min.css' }))
+    .pipe(gulp.dest('./www/lib/ti-ionic/dist'))
+    .on('end', done);
+});
+
 gulp.task('watch', function() {
-  gulp.watch(paths.sass, ['sass']);
+  gulp.watch(paths.sass, ['sass', 'ti-sass']);
   gulp.watch(paths.tiIonic, ['ti-ionic']);
 });
 
