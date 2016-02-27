@@ -14,7 +14,20 @@ to set up an app to develop ti-cms...
 
     bower install ng-cordova-oauth ngCordova --save-dev
 
-    npm install gulp gulp-concat gulp-if gulp-jshint gulp-minify-css gulp-ng-html2js gulp-rename gulp-sass gulp-strip-debug gulp-uglify gulp-util jshint jshint-stylish yargs --save
+    npm instapp gulp --save;
+    npm instapp gulp-concat --save;
+    npm instapp gulp-if --save;
+    npm instapp gulp-jshint --save;
+    npm instapp gulp-minify-css --save;
+    npm instapp gulp-ng-html2js --save;
+    npm instapp gulp-rename --save;
+    npm instapp gulp-sass --save;
+    npm instapp gulp-strip-debug --save;
+    npm instapp gulp-uglify --save;
+    npm instapp gulp-util --save;
+    npm instapp jshint --save;
+    npm instapp jshint-stylish --save;
+    npm instapp yargs --save;
 
 *replace the contents of scss.app.scss with this*
 
