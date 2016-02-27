@@ -9820,7 +9820,7 @@ ion-content[padding="true"] .ti-subheader {
   border-color: transparent;
   background-color: #DC4B38;
   color: #fff;
-  background-image: url(../assets/img/google.png); }
+  background-image: url(../lib/ti-ionic/assets/img/google.png); }
   .button.button-google:hover {
     color: #fff;
     text-decoration: none; }
@@ -9847,7 +9847,7 @@ ion-content[padding="true"] .ti-subheader {
   border-color: transparent;
   background-color: #2EABE5;
   color: #fff;
-  background-image: url(../assets/img/iconmonstr-twitter-1-64.png); }
+  background-image: url(../lib/ti-ionic/assets/img/iconmonstr-twitter-1-64.png); }
   .button.button-twitter:hover {
     color: #fff;
     text-decoration: none; }
@@ -9874,7 +9874,7 @@ ion-content[padding="true"] .ti-subheader {
   border-color: transparent;
   background-color: #0F75A9;
   color: #fff;
-  background-image: url(../assets/img/iconmonstr-linkedin-3-64.png); }
+  background-image: url(../lib/ti-ionic/assets/img/iconmonstr-linkedin-3-64.png); }
   .button.button-linkedin:hover {
     color: #fff;
     text-decoration: none; }
@@ -9953,7 +9953,7 @@ ion-content[padding="true"] .ti-subheader {
   border-color: transparent;
   background-color: #11c1f3;
   color: #fff;
-  background-image: url(../assets/img/submit-icon-28.png);
+  background-image: url(../lib/ti-ionic/assets/img/submit-icon-28.png);
   background-position: center center;
   background-size: 14px 24px;
   background-repeat: no-repeat;
