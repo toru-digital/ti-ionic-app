@@ -13,6 +13,7 @@ var gulpif = require ('gulp-if');
 var stripDebug = require ('gulp-strip-debug');
 var jshint = require ('gulp-jshint');
 var stylish = require ('jshint-stylish');
+var uglify = require ('gulp-uglify');
 
 var paths = {
   sass: [
@@ -60,8 +61,8 @@ gulp.task (
 gulp.task (
   'ti-scripts',
   ['ti-html', 'ti-js'],
-  function (done) {
-    gulp
+  function () {
+    return gulp
       .src ([
         "./www/lib/ti-ionic/tmp/templates.js",
         "./www/lib/ti-ionic/tmp/script.js",
@@ -71,9 +72,7 @@ gulp.task (
         .pipe (gulp.dest ('./www/lib/ti-ionic/dist'))
         .pipe (gulpif (IS_RELEASE_BUILD, uglify ()))
         .pipe (rename ({ extname: '.min.js' }))
-        .pipe (gulp.dest ('./www/lib/ti-ionic/dist'))
-        .on ('end', done)
-        .pipe (livereload ());
+        .pipe (gulp.dest ('./www/lib/ti-ionic/dist'));
   }
 );
 
