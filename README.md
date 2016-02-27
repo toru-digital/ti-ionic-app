@@ -45,3 +45,17 @@ to set up an app to develop ti-cms...
 
       ...
     );
+
+*set your ionic.project watch patterns to...*
+
+    {
+      ...
+
+      "watchPatterns": [
+        "www/**/*",
+        "!www/css/**/*",
+        "www/css/**/*.min.css",
+        "!www/lib/**/*",
+        "www/lib/ti-ionic/dist/*.min.js"
+      ]
+    }
