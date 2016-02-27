@@ -9816,6 +9816,113 @@ ion-content[padding="true"] .ti-subheader {
 .bar.bar-dark .button.ti-sidebar {
   background-image: url(../lib/ti-ionic/img/sidebar-icon-inverse-90.png); }
 
+.button {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+  border: none; }
+  .button.button-block, .button.button-full {
+    margin: 0;
+    margin-bottom: 10px; }
+    .button.button-block.activated, .button.button-full.activated {
+      margin-bottom: 9px; }
+  .button.activated {
+    box-shadow: inset 0 0px 2px rgba(0, 0, 0, 0.3);
+    margin-top: 1px;
+    margin-bottom: -1px; }
+  .button.icon-left {
+    text-align: left; }
+    .button.icon-left::before {
+      float: none; }
+  .button.icon::before {
+    width: 30px;
+    vertical-align: middle !important; }
+  .button.button-video {
+    width: 100%;
+    height: 200px;
+    background-position: center center;
+    background-size: cover;
+    position: relative; }
+    .button.button-video .icon {
+      width: 68px;
+      height: 68px;
+      position: absolute;
+      left: -1px;
+      top: -4px;
+      background-position: center center;
+      background-size: 68px 68px;
+      background-repeat: no-repeat;
+      background-color: rgba(17, 193, 243, 0.9);
+      border-radius: 50%;
+      border: 2px solid white;
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5); }
+    .button.button-video .title-holder {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      background-color: rgba(68, 68, 68, 0.85);
+      padding: 8px 6px;
+      line-height: 1.4;
+      color: white;
+      border-radius: 0 0 4px 4px; }
+  .button.button-video-alt {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    color: #444;
+    display: flex;
+    align-items: center;
+    border-color: transparent !important;
+    text-align: left;
+    background-color: rgba(248, 248, 248, 0.85); }
+    .button.button-video-alt .title {
+      line-height: 1.3;
+      flex-grow: 1;
+      flex-shrink: 1;
+      margin: 18px; }
+    .button.button-video-alt.activated .icons {
+      opacity: 0.85; }
+    .button.button-video-alt .icons {
+      width: 68px;
+      flex-grow: 0;
+      flex-shrink: 0;
+      position: relative;
+      margin: 4px 0 4px 10px;
+      top: 3px; }
+      .button.button-video-alt .icons .icon {
+        width: 68px;
+        height: 68px;
+        position: absolute;
+        background-color: blue;
+        left: 2px;
+        background-position: center center;
+        background-size: 68px 68px;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        border: 1px solid white;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5); }
+  .button.button-delete {
+    position: absolute;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    right: -4px;
+    background-color: #EBEAEA;
+    background-image: url(../lib/ti-ionic/img/trash-32.png);
+    background-size: 16px 20px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 1;
+    border: none !important; }
+    .button.button-delete.activated {
+      margin-top: 1px;
+      margin-bottom: -1px; }
+
 .button.button-google {
   border-color: transparent;
   background-color: #DC4B38;
@@ -10006,113 +10113,6 @@ ion-content[padding="true"] .ti-subheader {
     background-image: none !important; }
     .button.button-ti.button-processing ion-spinner {
       display: block; }
-
-.button {
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
-  border: none; }
-  .button.button-block, .button.button-full {
-    margin: 0;
-    margin-bottom: 10px; }
-    .button.button-block.activated, .button.button-full.activated {
-      margin-bottom: 9px; }
-  .button.activated {
-    box-shadow: inset 0 0px 2px rgba(0, 0, 0, 0.3);
-    margin-top: 1px;
-    margin-bottom: -1px; }
-  .button.icon-left {
-    text-align: left; }
-    .button.icon-left::before {
-      float: none; }
-  .button.icon::before {
-    width: 30px;
-    vertical-align: middle !important; }
-  .button.button-video {
-    width: 100%;
-    height: 200px;
-    background-position: center center;
-    background-size: cover;
-    position: relative; }
-    .button.button-video .icon {
-      width: 68px;
-      height: 68px;
-      position: absolute;
-      left: -1px;
-      top: -4px;
-      background-position: center center;
-      background-size: 68px 68px;
-      background-repeat: no-repeat;
-      background-color: rgba(17, 193, 243, 0.9);
-      border-radius: 50%;
-      border: 2px solid white;
-      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5); }
-    .button.button-video .title-holder {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      text-align: center;
-      background-color: rgba(68, 68, 68, 0.85);
-      padding: 8px 6px;
-      line-height: 1.4;
-      color: white;
-      border-radius: 0 0 4px 4px; }
-  .button.button-video-alt {
-    width: 100%;
-    height: auto;
-    padding: 0;
-    color: #444;
-    display: flex;
-    align-items: center;
-    border-color: transparent !important;
-    text-align: left;
-    background-color: rgba(248, 248, 248, 0.85); }
-    .button.button-video-alt .title {
-      line-height: 1.3;
-      flex-grow: 1;
-      flex-shrink: 1;
-      margin: 18px; }
-    .button.button-video-alt.activated .icons {
-      opacity: 0.85; }
-    .button.button-video-alt .icons {
-      width: 68px;
-      flex-grow: 0;
-      flex-shrink: 0;
-      position: relative;
-      margin: 4px 0 4px 10px;
-      top: 3px; }
-      .button.button-video-alt .icons .icon {
-        width: 68px;
-        height: 68px;
-        position: absolute;
-        background-color: blue;
-        left: 2px;
-        background-position: center center;
-        background-size: 68px 68px;
-        background-repeat: no-repeat;
-        border-radius: 50%;
-        border: 1px solid white;
-        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5); }
-  .button.button-delete {
-    position: absolute;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    min-width: 40px;
-    min-height: 40px;
-    padding: 0;
-    margin: 0;
-    top: 0;
-    right: -4px;
-    background-color: #EBEAEA;
-    background-image: url(../lib/ti-ionic/img/trash-32.png);
-    background-size: 16px 20px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    z-index: 1;
-    border: none !important; }
-    .button.button-delete.activated {
-      margin-top: 1px;
-      margin-bottom: -1px; }
 
 .card.has-submit {
   position: relative;
