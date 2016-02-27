@@ -12,8 +12,8 @@
 */
 @font-face {
   font-family: "Ionicons";
-  src: url("11/ionicons.eot?v=2.0.1");
-  src: url("11/ionicons.eot?v=2.0.1#iefix") format("embedded-opentype"), url("11/ionicons.ttf?v=2.0.1") format("truetype"), url("11/ionicons.woff?v=2.0.1") format("woff"), url("11/ionicons.woff") format("woff"), url("11/ionicons.svg?v=2.0.1#Ionicons") format("svg");
+  src: url("../lib/ionic/fonts/ionicons.eot?v=2.0.1");
+  src: url("../lib/ionic/fonts/ionicons.eot?v=2.0.1#iefix") format("embedded-opentype"), url("../lib/ionic/fonts/ionicons.ttf?v=2.0.1") format("truetype"), url("../lib/ionic/fonts/ionicons.woff?v=2.0.1") format("woff"), url("../lib/ionic/fonts/ionicons.woff") format("woff"), url("../lib/ionic/fonts/ionicons.svg?v=2.0.1#Ionicons") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -9717,8 +9717,8 @@ a.button {
 
 @font-face {
   font-family: 'icomoon';
-  src: url("11/icomoon.eot?2chstt");
-  src: url("11/icomoon.eot?2chstt#iefix") format("embedded-opentype"), url("11/icomoon.ttf?2chstt") format("truetype"), url("11/icomoon.woff?2chstt") format("woff"), url("11/icomoon.svg?2chstt#icomoon") format("svg");
+  src: url("fonts/icomoon.eot?2chstt");
+  src: url("fonts/icomoon.eot?2chstt#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?2chstt") format("truetype"), url("fonts/icomoon.woff?2chstt") format("woff"), url("fonts/icomoon.svg?2chstt#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
 

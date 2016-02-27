@@ -21,7 +21,8 @@ var paths = {
     './www/lib/ti-ionic/**/*.scss',
   ],
   tiIonic: [
-    './www/lib/ti-ionic/src/**/*.*',
+    './www/lib/ti-ionic/src/**/*.js',
+    './www/lib/ti-ionic/src/**/*.tpl.html'
   ]
 };
 
@@ -94,7 +95,7 @@ gulp.task('sass', function(done) {
 
 gulp.task('watch', function() {
   gulp.watch(paths.sass, ['sass']);
-  //gulp.watch(paths.tiIonic, ['ti-ionic']);
+  gulp.watch(paths.tiIonic, ['ti-ionic']);
 });
 
 gulp.task('install', ['git-check'], function() {
