@@ -1,17 +1,7 @@
-var gulp = require('gulp');
-var gutil = require('gulp-util');
-var concat = require('gulp-concat');
-var sass = require('gulp-sass');
-var minifyCss = require('gulp-minify-css');
-var rename = require('gulp-rename');
+var gulp = require ('gulp');
+var sass = require ('gulp-sass');
+var minifyCss = require ('gulp-minify-css');
 var yargs = require ('yargs').argv;
-var ngHtml2Js = require ("gulp-ng-html2js");
-var sort = require ('gulp-sort');
-var gulpif = require ('gulp-if');
-var stripDebug = require ('gulp-strip-debug');
-var jshint = require ('gulp-jshint');
-var stylish = require ('jshint-stylish');
-var uglify = require ('gulp-uglify');
 
 var paths = {
   sass: [
@@ -25,58 +15,6 @@ var paths = {
 };
 
 var IS_RELEASE_BUILD  = yargs.r || yargs.release;
-if (IS_RELEASE_BUILD) {
-  gutil.log (
-    gutil.colors.green('--release:'),
-    'Building release version (minified, debugs stripped)...'
-  );
-}
-
-gulp.task ('default', ['sass']);
-
-gulp.task (
-  'ti-html',
-  function () {
-    return gulp
-      .src ("./www/lib/ti-ionic/src/**/*.tpl.html")
-      .pipe (ngHtml2Js ({moduleName: "ti-ionic-templates" }))
-      .pipe (concat ("templates.js"))
-      .pipe (gulp.dest ("./www/lib/ti-ionic/tmp"));
-  }
-);
-
-gulp.task (
-  'ti-js',
-  function () {
-    return gulp
-      .src ("./www/lib/ti-ionic/src/**/*.js")
-      .pipe (sort ())
-      .pipe (gulpif (IS_RELEASE_BUILD, stripDebug ()))
-      .pipe (jshint ())
-      .pipe (jshint.reporter (stylish))
-      .pipe (jshint.reporter ('fail'))
-      .pipe (concat ('script.js'))
-      .pipe (gulp.dest ('./www/lib/ti-ionic/tmp'));
-  }
-);
-
-gulp.task (
-  'ti-ionic',
-  ['ti-html', 'ti-js'],
-  function () {
-    return gulp
-      .src ([
-        "./www/lib/ti-ionic/tmp/templates.js",
-        "./www/lib/ti-ionic/tmp/script.js",
-        "./www/lib/ti-ionic/lib/sha1.js"
-      ])
-        .pipe (concat ('ti-ionic.js'))
-        .pipe (gulp.dest ('./www/lib/ti-ionic/dist'))
-        .pipe (gulpif (IS_RELEASE_BUILD, uglify ()))
-        .pipe (rename ({ extname: '.min.js' }))
-        .pipe (gulp.dest ('./www/lib/ti-ionic/dist'));
-  }
-);
 
 gulp.task('sass', function(done) {
   gulp.src('./scss/ionic.app.scss')
@@ -104,7 +42,7 @@ gulp.task('ti-sass', function(done) {
 
 gulp.task('watch', function() {
   gulp.watch(paths.sass, ['sass', 'ti-sass']);
-  gulp.watch(paths.tiIonic, ['ti-ionic']);
+  // gulp.watch(paths.tiIonic, ['ti-ionic']);
 });
 
 // gulp.task (
@@ -121,7 +59,7 @@ gulp.task('watch', function() {
 //       .pipe (livereload ());
 // });
 
-// var plugins = require ('gulp-load-plugins')();
+
 // function getTask (task) {
 //   return require ('./www/lib/ti-ionic/scripts/' + task)(gulp, plugins);
 // }
