@@ -7,6 +7,12 @@ var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var sh = require('shelljs');
 var yargs = require ('yargs').argv;
+var ngHtml2Js = require ("gulp-ng-html2js");
+var sort = require ('gulp-sort');
+var gulpif = require ('gulp-if');
+var stripDebug = require ('gulp-strip-debug');
+var jshint = require ('gulp-jshint');
+var stylish = require ('jshint-stylish');
 
 var paths = {
   sass: [
