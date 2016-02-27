@@ -19,6 +19,9 @@ var paths = {
   sass: [
     './scss/**/*.scss',
     './www/lib/ti-ionic/**/*.scss',
+  ],
+  tiIonic: [
+    './www/lib/ti-ionic/src/**/*.*',
   ]
 };
 
@@ -30,7 +33,7 @@ if (IS_RELEASE_BUILD) {
   );
 }
 
-gulp.task('default', ['sass']);
+gulp.task ('default', ['sass']);
 
 gulp.task (
   'ti-html',
@@ -59,7 +62,7 @@ gulp.task (
 );
 
 gulp.task (
-  'ti-scripts',
+  'ti-ionic',
   ['ti-html', 'ti-js'],
   function () {
     return gulp
@@ -91,6 +94,7 @@ gulp.task('sass', function(done) {
 
 gulp.task('watch', function() {
   gulp.watch(paths.sass, ['sass']);
+  gulp.watch(paths.tiIonic, ['ti-ionic']);
 });
 
 gulp.task('install', ['git-check'], function() {
