@@ -22,17 +22,6 @@ gulp.task (
   'watch',
   ['ti-watch'],
   function () {
-    gulp.watch (
-      [
-        './scss/**/*.scss'
-      ],
-      ['sass']
-    );
+    gulp.watch ( ['./scss/**/*.scss'], ['sass'] );
   }
 );
-
-// var paths = [
-//   './www/lib/ti-ionic/src/**/*.js',
-//   './www/lib/ti-ionic/src/**/*.tpl.html'
-// ];
-// // gulp.watch(paths.tiIonic, ['ti-ionic']); , 'ti-sass'
