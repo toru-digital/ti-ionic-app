@@ -10061,10 +10061,7 @@ ion-content[padding="true"] .ti-subheader {
   background-color: #11c1f3;
   color: #fff;
   background-image: url(../lib/ti-ionic/assets/img/submit-icon-28.png);
-  background-position: center center;
-  background-size: 14px 24px;
-  background-repeat: no-repeat;
-  width: 160px; }
+  width: 140px; }
   .button.button-ti-cms:hover {
     color: #fff;
     text-decoration: none; }
@@ -10086,17 +10083,6 @@ ion-content[padding="true"] .ti-subheader {
       background-color: #0a9dc7;
       box-shadow: none;
       color: #fff; }
-  .button.button-ti-cms ion-spinner {
-    display: none; }
-    .button.button-ti-cms ion-spinner svg {
-      margin-top: 7px;
-      margin-bottom: -7px; }
-  .button.button-ti-cms.disabled {
-    opacity: 1;
-    background-color: #55d3f6;
-    background-image: none; }
-    .button.button-ti-cms.disabled ion-spinner {
-      display: block; }
 
 .button.button-ti {
   display: flex;
@@ -10119,7 +10105,7 @@ ion-content[padding="true"] .ti-subheader {
   overflow: visible;
   padding-bottom: 7px;
   margin-bottom: 50px; }
-  .card.has-submit .button-submit {
+  .card.has-submit .button-ti {
     position: absolute;
     left: 0;
     right: 0;
