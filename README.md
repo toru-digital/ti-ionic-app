@@ -20,12 +20,15 @@ to set up an app to develop ti-cms...
 
     @import "../www/lib/ti-ionic/src/scss/ti-ionic";
 
+*in your gulpfile, require the ti-ionic tasks and pass argv to them*
+
+    require ('./www/lib/ti-ionic/gulp-tasks/scripts')(gulp, yargs);
+
 *Add the 'ti-wacth task to your gulp watch task'*
 
     gulp.task (
       'watch',
       ['ti-watch'],
-      function () {
-        gulp.watch ( ['./scss/**/*.scss'], ['sass'] );
-      }
+
+      ...
     );
