@@ -12,8 +12,8 @@
 */
 @font-face {
   font-family: "Ionicons";
-  src: url("../../ionic/fonts/ionicons.eot?v=2.0.1");
-  src: url("../../ionic/fonts/ionicons.eot?v=2.0.1#iefix") format("embedded-opentype"), url("../../ionic/fonts/ionicons.ttf?v=2.0.1") format("truetype"), url("../../ionic/fonts/ionicons.woff?v=2.0.1") format("woff"), url("../../ionic/fonts/ionicons.woff") format("woff"), url("../../ionic/fonts/ionicons.svg?v=2.0.1#Ionicons") format("svg");
+  src: url("./wekewkowekofonts/ionicons.eot?v=2.0.1");
+  src: url("./wekewkowekofonts/ionicons.eot?v=2.0.1#iefix") format("embedded-opentype"), url("./wekewkowekofonts/ionicons.ttf?v=2.0.1") format("truetype"), url("./wekewkowekofonts/ionicons.woff?v=2.0.1") format("woff"), url("./wekewkowekofonts/ionicons.woff") format("woff"), url("./wekewkowekofonts/ionicons.svg?v=2.0.1#Ionicons") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -9728,8 +9728,8 @@ a.button {
 */
 @font-face {
   font-family: "Ionicons";
-  src: url("../../ionic/fonts/ionicons.eot?v=2.0.1");
-  src: url("../../ionic/fonts/ionicons.eot?v=2.0.1#iefix") format("embedded-opentype"), url("../../ionic/fonts/ionicons.ttf?v=2.0.1") format("truetype"), url("../../ionic/fonts/ionicons.woff?v=2.0.1") format("woff"), url("../../ionic/fonts/ionicons.woff") format("woff"), url("../../ionic/fonts/ionicons.svg?v=2.0.1#Ionicons") format("svg");
+  src: url("./wekewkowekofonts/ionicons.eot?v=2.0.1");
+  src: url("./wekewkowekofonts/ionicons.eot?v=2.0.1#iefix") format("embedded-opentype"), url("./wekewkowekofonts/ionicons.ttf?v=2.0.1") format("truetype"), url("./wekewkowekofonts/ionicons.woff?v=2.0.1") format("woff"), url("./wekewkowekofonts/ionicons.woff") format("woff"), url("./wekewkowekofonts/ionicons.svg?v=2.0.1#Ionicons") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -19433,8 +19433,8 @@ a.button {
 
 @font-face {
   font-family: 'icomoon';
-  src: url("fonts/icomoon.eot?2chstt");
-  src: url("fonts/icomoon.eot?2chstt#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?2chstt") format("truetype"), url("fonts/icomoon.woff?2chstt") format("woff"), url("fonts/icomoon.svg?2chstt#icomoon") format("svg");
+  src: url("./www/lib/ti-ionic/assets/fonts/icomoon/fonts/icomoon.eot?2chstt");
+  src: url("./www/lib/ti-ionic/assets/fonts/icomoon/fonts/icomoon.eot?2chstt#iefix") format("embedded-opentype"), url("./www/lib/ti-ionic/assets/fonts/icomoon/fonts/icomoon.ttf?2chstt") format("truetype"), url("./www/lib/ti-ionic/assets/fonts/icomoon/fonts/icomoon.woff?2chstt") format("woff"), url("./www/lib/ti-ionic/assets/fonts/icomoon/fonts/icomoon.svg?2chstt#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
 

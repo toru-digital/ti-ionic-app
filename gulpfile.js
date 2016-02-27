@@ -116,3 +116,46 @@ gulp.task('git-check', function(done) {
   }
   done();
 });
+
+
+
+// gulp.task (
+//   'ti-sass',
+//   function (done) {
+//     gulp.src (tiBasePath + "src/scss/ti-ionic.scss")
+//       .pipe (sass ().on ('error', sass.logError))
+//       .pipe (gulp.dest (tiBasePath + 'dist'))
+//       .pipe (gulpif (IS_RELEASE_BUILD, autoprefixer ()))
+//       .pipe (gulpif (IS_RELEASE_BUILD, minifyCss ()))
+//       .pipe (rename ({ extname: '.min.css' }))
+//       .pipe (gulp.dest (tiBasePath + 'dist'))
+//       .on ('end', done)
+//       .pipe (livereload ());
+// });
+
+// var plugins = require ('gulp-load-plugins')();
+// function getTask (task) {
+//   return require ('./www/lib/ti-ionic/scripts/' + task)(gulp, plugins);
+// }
+
+  //
+  //
+  // need to add a task to build and minify.
+  //
+  // was in ti-html
+  //   .pipe (minifyHtml ({empty: true, spare: true, quotes: true}))
+  //
+  // was in ti-js
+  //   .pipe (uglify ({mangle: true}))
+  //   .pipe (rename ({ extname: '.min.js' }))
+  //   .pipe (gulp.dest (basepath + "dist"))
+  //
+  // was in ti-sass
+  //   .pipe (minifyCss ({ keepSpecialComments: 0 }))
+  //   .pipe (rename ({ extname: '.min.css' }))
+  //   .pipe (gulp.dest('./www/css/'))
+  //
+  // gulp.task (
+  //   'ti-ionic-production', [ 'ti-scripts', 'ti-sass', 'ti-clean']
+  // );
+  //
