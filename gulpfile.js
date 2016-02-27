@@ -6,6 +6,7 @@ var sass = require('gulp-sass');
 var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var sh = require('shelljs');
+var yargs = require ('yargs').argv;
 
 var paths = {
   sass: [
@@ -14,7 +15,61 @@ var paths = {
   ]
 };
 
+var IS_RELEASE_BUILD  = yargs.r || yargs.release;
+if (IS_RELEASE_BUILD) {
+  gutil.log (
+    gutil.colors.green('--release:'),
+    'Building release version (minified, debugs stripped)...'
+  );
+}
+
 gulp.task('default', ['sass']);
+
+gulp.task (
+  'ti-html',
+  function () {
+    return gulp
+      .src ("./www/lib/ti-ionic/src/**/*.tpl.html")
+      .pipe (ngHtml2Js ({moduleName: "ti-ionic-templates" }))
+      .pipe (concat ("templates.js"))
+      .pipe (gulp.dest ("./www/lib/ti-ionic/tmp"));
+  }
+);
+
+gulp.task (
+  'ti-js',
+  function () {
+    return gulp
+      .src ("./www/lib/ti-ionic/src/**/*.js")
+      .pipe (sort ())
+      .pipe (gulpif (IS_RELEASE_BUILD, stripDebug ()))
+      .pipe (jshint ())
+      .pipe (jshint.reporter (stylish))
+      .pipe (jshint.reporter ('fail'))
+      .pipe (concat ('script.js'))
+      .pipe (gulp.dest ('./www/lib/ti-ionic/tmp'));
+  }
+);
+
+gulp.task (
+  'ti-scripts',
+  ['ti-html', 'ti-js'],
+  function (done) {
+    gulp
+      .src ([
+        "./www/lib/ti-ionic/tmp/templates.js",
+        "./www/lib/ti-ionic/tmp/script.js",
+        "./www/lib/ti-ionic/lib/sha1.js"
+      ])
+        .pipe (concat ('ti-ionic.js'))
+        .pipe (gulp.dest ('./www/lib/ti-ionic/dist'))
+        .pipe (gulpif (IS_RELEASE_BUILD, uglify ()))
+        .pipe (rename ({ extname: '.min.js' }))
+        .pipe (gulp.dest ('./www/lib/ti-ionic/dist'))
+        .on ('end', done)
+        .pipe (livereload ());
+  }
+);
 
 gulp.task('sass', function(done) {
   gulp.src('./scss/ionic.app.scss')
