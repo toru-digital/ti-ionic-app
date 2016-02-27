@@ -20,11 +20,11 @@ gulp.task (
 
 gulp.task (
   'watch',
+  ['ti-watch'],
   function () {
     gulp.watch (
       [
-        './scss/**/*.scss',
-        './www/lib/ti-ionic/**/*.scss'
+        './scss/**/*.scss'
       ],
       ['sass']
     );
