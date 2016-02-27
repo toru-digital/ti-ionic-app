@@ -1,10 +1,10 @@
 var gulp      = require ('gulp');
 var sass      = require ('gulp-sass');
 var minifyCss = require ('gulp-minify-css');
-var yargs     = require ('yargs').argv;
+var yargs     = require ('yargs');
 var rename    = require ('gulp-rename');
 
-var IS_RELEASE_BUILD  = yargs.r || yargs.release;
+require ('./www/lib/ti-ionic/gulp-tasks/scripts')(gulp, yargs.argv);
 
 gulp.task (
   'sass',
