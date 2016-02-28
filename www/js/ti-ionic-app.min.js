@@ -19,10 +19,11 @@ angular.module (
   'ti-ionic-app',
   [
     'ionic',
+    'ti-auth',
     'ti-ionic-app.dashboard',
     'ti-ionic-app.home',
-    'ti-ionic-app-templates',
-    'ti-auth'
+    'ti-ionic-app-templates'
+
   ]
 )
 
@@ -67,10 +68,7 @@ angular.module ('ti-ionic-app.dashboard')
         'app.dashboard', {
           url : '/dashboard',
           abstract : true,
-          template : "<ion-nav-view></ion-nav-view>",
-          data : {
-            role : "guest"
-          }
+          template : "<ion-nav-view></ion-nav-view>"
         }
       )
 
@@ -83,12 +81,12 @@ angular.module ('ti-ionic-app.dashboard')
   }
 );
 
-angular.module ('ti-ionic-app.home', []);
+angular.module ('ti-ionic-app.home', ['ti-auth']);
 
 angular.module ('ti-ionic-app.home')
 
 .config (
-  function ($stateProvider) {
+  function ($stateProvider, USER_ROLES) {
     $stateProvider
       .state (
         'app.home', {
@@ -96,8 +94,8 @@ angular.module ('ti-ionic-app.home')
           abstract: true,
           template : "<ion-nav-view></ion-nav-view>",
           data : {
-            role : "user"
-          }
+      		  authorizedRoles : [USER_ROLES.user]
+      		}
         }
       )
 
