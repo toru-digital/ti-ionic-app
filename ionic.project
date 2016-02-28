@@ -1,0 +1,16 @@
+{
+  "name": "tiApp",
+  "app_id": "",
+  "gulpStartupTasks": [
+    "sass",
+    "scripts",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/index.html",
+    "www/img/*.*",
+    "www/css/*.min.css",
+    "www/js/*.min.js",
+    "www/lib/ti-ionic/dist/*.min.js"
+  ]
+}
