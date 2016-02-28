@@ -1,17 +1,17 @@
-angular.module ('ti-ionic-app.signin')
+angular.module ('ti-ionic-app.dashboard')
 
 .config (
   function ($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state (
-        'signin', {
-          url: '/signin',
+        'app.dashboard', {
+          url: '/dashboard',
           abstract: true
         }
       )
 
       .state (
-        'signin.home', {
+        'app.dashboard.signin', {
           url: '/signin'
         }
       );

@@ -11,6 +11,7 @@ var stripDebug  = require ('gulp-strip-debug');
 var uglify      = require ('gulp-uglify');
 var stylish     = require ('jshint-stylish');
 var yargs       = require ('yargs').argv;
+var notify      = require ("gulp-notify");
 
 require ('./www/lib/ti-ionic/gulp-tasks/scripts')(gulp, yargs);
 var IS_RELEASE_BUILD  = yargs.r || yargs.release;
@@ -37,7 +38,7 @@ gulp.task (
       .pipe (concat ("templates.js"))
       .pipe (gulp.dest ("./tmp"));
   }
-);
+)
 
 gulp.task (
   'js',
@@ -48,7 +49,7 @@ gulp.task (
       .pipe (gulpif (IS_RELEASE_BUILD, stripDebug ()))
       .pipe (jshint ())
       .pipe (jshint.reporter (stylish))
-      .pipe (jshint.reporter ('fail'))
+      // .pipe (jshint.reporter ('fail'))
       .pipe (concat ('script.js'))
       .pipe (gulp.dest ('./tmp'));
   }
@@ -75,7 +76,7 @@ gulp.task (
     gulp.watch (
       [
         "./src/**/*.js",
-        "./src/**/*.tpl.html",
+        "./src/**/*.tpl.html"
       ],
       ['scripts']
     );

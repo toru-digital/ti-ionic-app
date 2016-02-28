@@ -2,8 +2,9 @@ angular.module (
   'ti-ionic-app',
   [
     'ionic',
-    'starter.controllers',
-    'starter.services',
+    'ti-ionic-app.dashboard',
+    'ti-ionic-app.home',
+    'ti-ionic-app-templates',
     'ti-auth'
   ]
 )
@@ -35,11 +36,5 @@ angular.module (
         consumerSecretKey : "VOR85Y4ZXcy5DcfAsC7CGmRlHCoGdTscnbD6z5ewV8oduJJq0L"
       }
     );
-  }
-)
-
-.config (
-  function ($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise ('/app');
   }
 );

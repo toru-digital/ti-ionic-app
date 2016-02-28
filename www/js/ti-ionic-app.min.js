@@ -1,9 +1,60 @@
+(function(module) {
+try {
+  module = angular.module('ti-ionic-app-templates');
+} catch (e) {
+  module = angular.module('ti-ionic-app-templates', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('app/app.tpl.html',
+    '<ion-nav-view\n' +
+    '  name="appContent"\n' +
+    '  animation="slide-left-right">\n' +
+    '</ion-nav-view>\n' +
+    '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('ti-ionic-app-templates');
+} catch (e) {
+  module = angular.module('ti-ionic-app-templates', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('app/home.tpl.html',
+    '<ion-view>\n' +
+    '  <ion-content>\n' +
+    '    HELLO\n' +
+    '  </ion-content>\n' +
+    '</ion-view>\n' +
+    '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('ti-ionic-app-templates');
+} catch (e) {
+  module = angular.module('ti-ionic-app-templates', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('signin/home.tpl.html',
+    '<ion-view>\n' +
+    '  <ion-content>\n' +
+    '    <ti-signin></ti-signin>\n' +
+    '  </ion-content>\n' +
+    '</ion-view>\n' +
+    '');
+}]);
+})();
+
 angular.module (
   'ti-ionic-app',
   [
     'ionic',
-    'starter.controllers',
-    'starter.services',
+    'ti-ionic-app.app',
+    'ti-ionic-app.signin',
+    'ti-ionic-app-templates',
     'ti-auth'
   ]
 )
@@ -36,12 +87,6 @@ angular.module (
       }
     );
   }
-)
-
-.config (
-  function ($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise ('/app');
-  }
 );
 
 angular.module ('ti-ionic-app.app', []);
@@ -55,37 +100,37 @@ angular.module ('ti-ionic-app.app')
         'app', {
           url: '/app',
           abstract: true,
-          templateUrl: 'templates/tabs.html'
+          templateUrl: 'app/app.tpl.html'
         }
       )
 
       .state (
         'app.home', {
           url: '/home',
-          views: {
-            'tab-dash': {
-              templateUrl: 'templates/tab-dash.html',
-              controller: 'DashCtrl'
-            }
-          }
+          views : {
+      			'appContent' : {
+      				templateUrl: 'app/home.tpl.html'
+      			}
+      		},
         }
       );
   }
 );
 
-angular.module ('ti-ionic-app', [])
-
-.controller (
-  'DashCtrl',
-  function ($scope) {}
+angular.module (
+  'ti-ionic-app'
 )
 
-.controller (
-  'AccountCtrl',
-  function ($scope) {
-    $scope.settings = {
-      enableFriends: true
-    };
+.config (
+  function ($stateProvider, $urlRouterProvider) {
+
+    $stateProvider.state (
+      'app', {
+        url: '/app',
+        abstract: false,
+        template: '<div>HELLO</div>'
+      }
+    );
   }
 );
 

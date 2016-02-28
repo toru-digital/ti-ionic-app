@@ -18,7 +18,9 @@
     "jshint-stylish": "^2.1.0",
     "yargs": "^4.2.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp-notify": "^2.2.0"
+  },
   "cordovaPlugins": [
     "cordova-plugin-device",
     "cordova-plugin-console",
