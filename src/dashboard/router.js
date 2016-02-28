@@ -9,7 +9,7 @@ angular.module ('ti-ionic-app.dashboard')
           abstract : true,
           template : "<ion-nav-view></ion-nav-view>",
           data : {
-      		  authorizedRoles : [USER_ROLES.guest]
+      		  role : USER_ROLES.guest
       		}
         }
       )

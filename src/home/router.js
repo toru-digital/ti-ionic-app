@@ -9,7 +9,7 @@ angular.module ('ti-ionic-app.home')
           abstract: true,
           template : "<ion-nav-view></ion-nav-view>",
           data : {
-      		  authorizedRoles : [USER_ROLES.user]
+      		  role : USER_ROLES.user
       		}
         }
       )
