@@ -7,7 +7,10 @@ angular.module ('ti-ionic-app.dashboard')
         'app.dashboard', {
           url : '/dashboard',
           abstract : true,
-          template : "<ion-nav-view></ion-nav-view>"
+          template : "<ion-nav-view></ion-nav-view>",
+          data : {
+            role : "guest"
+          }
         }
       )
 

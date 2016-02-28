@@ -7,7 +7,10 @@ angular.module ('ti-ionic-app.home')
         'app.home', {
           url: '/home',
           abstract: true,
-          template : "<ion-nav-view></ion-nav-view>"
+          template : "<ion-nav-view></ion-nav-view>",
+          data : {
+            role : "user"
+          }
         }
       )
 
