@@ -8,6 +8,7 @@ var rename      = require ('gulp-rename');
 var sass        = require ('gulp-sass');
 var sort        = require ('gulp-sort');
 var stripDebug  = require ('gulp-strip-debug');
+var uglify      = require ('gulp-uglify');
 var stylish     = require ('jshint-stylish');
 var yargs       = require ('yargs').argv;
 
@@ -54,10 +55,34 @@ gulp.task (
 );
 
 gulp.task (
+  'scripts',
+  ['html', 'js'],
+  function () {
+    return gulp
+      .src (["./tmp/templates.js", "./tmp/script.js"])
+        .pipe (concat ('ti-ionic-app.js'))
+        .pipe (gulp.dest ('./www/js'))
+        .pipe (gulpif (IS_RELEASE_BUILD, uglify ()))
+        .pipe (rename ({ extname: '.min.js' }))
+        .pipe (gulp.dest ('./www/js'));
+  }
+);
+
+gulp.task (
   'watch',
   ['ti-watch'],
   function () {
-    gulp.watch ( ["./src/**/*.js"], ['js'] );
-    gulp.watch ( ['./scss/**/*.scss'], ['sass'] );
+    gulp.watch (
+      [
+        "./src/**/*.js",
+        "./src/**/*.tpl.html",
+      ],
+      ['js']
+    );
+
+    gulp.watch (
+      ['./scss/**/*.scss'],
+      ['sass']
+    );
   }
 );
