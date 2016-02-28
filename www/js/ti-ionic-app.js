@@ -5,40 +5,7 @@ try {
   module = angular.module('ti-ionic-app-templates', []);
 }
 module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('app/app.tpl.html',
-    '<ion-nav-view\n' +
-    '  name="appContent"\n' +
-    '  animation="slide-left-right">\n' +
-    '</ion-nav-view>\n' +
-    '');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('ti-ionic-app-templates');
-} catch (e) {
-  module = angular.module('ti-ionic-app-templates', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('app/home.tpl.html',
-    '<ion-view>\n' +
-    '  <ion-content>\n' +
-    '    HELLO\n' +
-    '  </ion-content>\n' +
-    '</ion-view>\n' +
-    '');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('ti-ionic-app-templates');
-} catch (e) {
-  module = angular.module('ti-ionic-app-templates', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('signin/home.tpl.html',
+  $templateCache.put('dashboard/signin.tpl.html',
     '<ion-view>\n' +
     '  <ion-content>\n' +
     '    <ti-signin></ti-signin>\n' +
@@ -107,7 +74,7 @@ angular.module ('ti-ionic-app.dashboard')
       .state (
         'app.dashboard.signin', {
           url: '/signin',
-          template : "YES"
+          templateUrl : "dashboard/signin.tpl.html"
         }
       );
   }

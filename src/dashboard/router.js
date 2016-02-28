@@ -14,7 +14,7 @@ angular.module ('ti-ionic-app.dashboard')
       .state (
         'app.dashboard.signin', {
           url: '/signin',
-          template : "YES"
+          templateUrl : "dashboard/signin.tpl.html"
         }
       );
   }
