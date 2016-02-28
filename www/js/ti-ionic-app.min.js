@@ -61,7 +61,7 @@ angular.module ('ti-ionic-app.dashboard', []);
 angular.module ('ti-ionic-app.dashboard')
 
 .config (
-  function ($stateProvider, $urlRouterProvider) {
+  function ($stateProvider) {
     $stateProvider
       .state (
         'app.dashboard', {
@@ -85,18 +85,20 @@ angular.module ('ti-ionic-app.home', []);
 angular.module ('ti-ionic-app.home')
 
 .config (
-  function ($stateProvider, $urlRouterProvider) {
+  function ($stateProvider) {
     $stateProvider
       .state (
         'app.home', {
           url: '/home',
-          abstract: true
+          abstract: true,
+          template : "<ion-nav-view></ion-nav-view>"
         }
       )
 
       .state (
         'app.home.index', {
-          url: '/index'
+          url: '/index',
+          template : "You're in!"
         }
       );
   }
@@ -108,7 +110,7 @@ angular.module (
 
 .config (
   function ($stateProvider, $urlRouterProvider) {
-
+    $urlRouterProvider.otherwise ("/app/home/index");
     $stateProvider.state (
       'app', {
         url: '/app',

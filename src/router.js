@@ -4,7 +4,7 @@ angular.module (
 
 .config (
   function ($stateProvider, $urlRouterProvider) {
-
+    $urlRouterProvider.otherwise ("/app/home/index");
     $stateProvider.state (
       'app', {
         url: '/app',

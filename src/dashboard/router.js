@@ -1,7 +1,7 @@
 angular.module ('ti-ionic-app.dashboard')
 
 .config (
-  function ($stateProvider, $urlRouterProvider) {
+  function ($stateProvider) {
     $stateProvider
       .state (
         'app.dashboard', {
