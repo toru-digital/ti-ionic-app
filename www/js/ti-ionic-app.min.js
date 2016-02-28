@@ -52,8 +52,8 @@ angular.module (
   'ti-ionic-app',
   [
     'ionic',
-    'ti-ionic-app.app',
-    'ti-ionic-app.signin',
+    'ti-ionic-app.dashboard',
+    'ti-ionic-app.home',
     'ti-ionic-app-templates',
     'ti-auth'
   ]
@@ -89,29 +89,47 @@ angular.module (
   }
 );
 
-angular.module ('ti-ionic-app.app', []);
+angular.module ('ti-ionic-app.dashboard', []);
 
-angular.module ('ti-ionic-app.app')
+angular.module ('ti-ionic-app.dashboard')
 
 .config (
   function ($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state (
-        'app', {
-          url: '/app',
-          abstract: true,
-          templateUrl: 'app/app.tpl.html'
+        'app.dashboard', {
+          url : '/dashboard',
+          abstract : true,
+          template : "<ion-nav-view></ion-nav-view>"
         }
       )
 
       .state (
+        'app.dashboard.signin', {
+          url: '/signin',
+          template : "YES"
+        }
+      );
+  }
+);
+
+angular.module ('ti-ionic-app.home', []);
+
+angular.module ('ti-ionic-app.home')
+
+.config (
+  function ($stateProvider, $urlRouterProvider) {
+    $stateProvider
+      .state (
         'app.home', {
           url: '/home',
-          views : {
-      			'appContent' : {
-      				templateUrl: 'app/home.tpl.html'
-      			}
-      		},
+          abstract: true
+        }
+      )
+
+      .state (
+        'app.home.index', {
+          url: '/index'
         }
       );
   }
@@ -127,31 +145,9 @@ angular.module (
     $stateProvider.state (
       'app', {
         url: '/app',
-        abstract: false,
-        template: '<div>HELLO</div>'
+        abstract: true,
+        template : "<ion-nav-view></ion-nav-view>"
       }
     );
-  }
-);
-
-angular.module ('ti-ionic-app.signin', []);
-
-angular.module ('ti-ionic-app.signin')
-
-.config (
-  function ($stateProvider, $urlRouterProvider) {
-    $stateProvider
-      .state (
-        'signin', {
-          url: '/signin',
-          abstract: true
-        }
-      )
-
-      .state (
-        'signin.home', {
-          url: '/signin'
-        }
-      );
   }
 );

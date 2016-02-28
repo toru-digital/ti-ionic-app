@@ -8,8 +8,8 @@ angular.module (
     $stateProvider.state (
       'app', {
         url: '/app',
-        abstract: false,
-        template: '<div>HELLO</div>'
+        abstract: true,
+        template : "<ion-nav-view></ion-nav-view>"
       }
     );
   }

@@ -1,1 +1,1 @@
-angular.module ('ti-ionic-app.app', []);
+angular.module ('ti-ionic-app.home', []);
