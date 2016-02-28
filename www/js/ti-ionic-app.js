@@ -5,6 +5,23 @@ try {
   module = angular.module('ti-ionic-app-templates', []);
 }
 module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('dashboard/signin.tpl.html',
+    '<ion-view>\n' +
+    '  <ion-content>\n' +
+    '    <ti-signin></ti-signin>\n' +
+    '  </ion-content>\n' +
+    '</ion-view>\n' +
+    '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('ti-ionic-app-templates');
+} catch (e) {
+  module = angular.module('ti-ionic-app-templates', []);
+}
+module.run(['$templateCache', function($templateCache) {
   $templateCache.put('home/index.tpl.html',
     '<ion-view>\n' +
     '  <ion-content>\n' +
@@ -19,23 +36,6 @@ module.run(['$templateCache', function($templateCache) {
 }]);
 })();
 
-(function(module) {
-try {
-  module = angular.module('ti-ionic-app-templates');
-} catch (e) {
-  module = angular.module('ti-ionic-app-templates', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('dashboard/signin.tpl.html',
-    '<ion-view>\n' +
-    '  <ion-content>\n' +
-    '    <ti-signin></ti-signin>\n' +
-    '  </ion-content>\n' +
-    '</ion-view>\n' +
-    '');
-}]);
-})();
-
 angular.module (
   'ti-ionic-app',
   [
@@ -44,12 +44,13 @@ angular.module (
     'ti-ionic-app.dashboard',
     'ti-ionic-app.home',
     'ti-ionic-app-templates'
-
   ]
 )
 
+
 .run (
   function ($tiAuth) {
+    console.log ("RUN CALLED FROM TI-IONIC");
     $tiAuth.addService (
       'ti-cms',
       { 'api' : "http://sealedairdigital.com/divexpress/api/web/v0_10" }
@@ -77,6 +78,8 @@ angular.module (
     );
   }
 );
+
+console.log("TESTING");
 
 angular.module ('ti-ionic-app.dashboard', []);
 

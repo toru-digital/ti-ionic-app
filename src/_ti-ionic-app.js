@@ -6,12 +6,13 @@ angular.module (
     'ti-ionic-app.dashboard',
     'ti-ionic-app.home',
     'ti-ionic-app-templates'
-
   ]
 )
 
+
 .run (
   function ($tiAuth) {
+    console.log ("RUN CALLED FROM TI-IONIC");
     $tiAuth.addService (
       'ti-cms',
       { 'api' : "http://sealedairdigital.com/divexpress/api/web/v0_10" }
@@ -39,3 +40,5 @@ angular.module (
     );
   }
 );
+
+console.log("TESTING");
