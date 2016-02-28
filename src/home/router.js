@@ -17,7 +17,9 @@ angular.module ('ti-ionic-app.home')
       .state (
         'app.home.index', {
           url: '/index',
-          template : "You're in!"
+          controller : "IndexCtrl",
+          cpmtrollerAs : "_index",
+          templateUrl : "home/index.tpl.html"
         }
       );
   }

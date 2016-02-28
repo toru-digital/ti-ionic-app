@@ -5,6 +5,27 @@ try {
   module = angular.module('ti-ionic-app-templates', []);
 }
 module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('home/index.tpl.html',
+    '<ion-view>\n' +
+    '  <ion-content>\n' +
+    '    <div class="padding">\n' +
+    '      <div class="button button-calm" ng-click="signout()">\n' +
+    '        sign out\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '  </ion-content>\n' +
+    '</ion-view>\n' +
+    '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('ti-ionic-app-templates');
+} catch (e) {
+  module = angular.module('ti-ionic-app-templates', []);
+}
+module.run(['$templateCache', function($templateCache) {
   $templateCache.put('dashboard/signin.tpl.html',
     '<ion-view>\n' +
     '  <ion-content>\n' +
@@ -88,6 +109,17 @@ angular.module ('ti-ionic-app.home', ['ti-auth']);
 
 angular.module ('ti-ionic-app.home')
 
+.controller (
+	"IndexCtrl",
+	function ($scope, $tiAuth) {
+    $scope.signout = function ($) {
+      $tiAuth.signout ();
+    };
+  }
+);
+
+angular.module ('ti-ionic-app.home')
+
 .config (
   function ($stateProvider, USER_ROLES) {
     $stateProvider
@@ -105,7 +137,9 @@ angular.module ('ti-ionic-app.home')
       .state (
         'app.home.index', {
           url: '/index',
-          template : "You're in!"
+          controller : "IndexCtrl",
+          cpmtrollerAs : "_index",
+          templateUrl : "home/index.tpl.html"
         }
       );
   }
