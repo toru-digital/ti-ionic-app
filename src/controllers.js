@@ -1,4 +1,4 @@
-angular.module ('starter.controllers', [])
+angular.module ('ti-ionic-app', [])
 
 .controller (
   'DashCtrl',
