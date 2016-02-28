@@ -18,7 +18,7 @@ var IS_RELEASE_BUILD  = yargs.r || yargs.release;
 gulp.task (
   'sass',
   function () {
-    return gulp.src ('./scss/ionic.app.scss')
+    return gulp.src ('./src/ti-ionic-app.scss')
       .pipe (sass ())
       .on ('error', sass.logError)
       .pipe (gulp.dest ('./www/css/'))
@@ -77,7 +77,7 @@ gulp.task (
         "./src/**/*.js",
         "./src/**/*.tpl.html",
       ],
-      ['js']
+      ['scripts']
     );
 
     gulp.watch (

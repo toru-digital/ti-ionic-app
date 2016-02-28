@@ -36,9 +36,42 @@ angular.module (
       }
     );
   }
+)
+
+.config (
+  function ($stateProvider, $urlRouterProvider) {
+    $urlRouterProvider.otherwise ('/app');
+  }
 );
 
-angular.module ('ti-ionic-app.login', []);
+angular.module ('ti-ionic-app.app', []);
+
+angular.module ('ti-ionic-app.app')
+
+.config (
+  function ($stateProvider, $urlRouterProvider) {
+    $stateProvider
+      .state (
+        'app', {
+          url: '/app',
+          abstract: true,
+          templateUrl: 'templates/tabs.html'
+        }
+      )
+
+      .state (
+        'app.home', {
+          url: '/home',
+          views: {
+            'tab-dash': {
+              templateUrl: 'templates/tab-dash.html',
+              controller: 'DashCtrl'
+            }
+          }
+        }
+      );
+  }
+);
 
 angular.module ('ti-ionic-app', [])
 
@@ -56,43 +89,24 @@ angular.module ('ti-ionic-app', [])
   }
 );
 
-angular.module ('ti-ionic-app.login', []);
+angular.module ('ti-ionic-app.signin', []);
 
-angular.module ('ti-ionic-app')
+angular.module ('ti-ionic-app.signin')
 
 .config (
   function ($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state (
-        'tab', {
-          url: '/tab',
-          abstract: true,
-          templateUrl: 'templates/tabs.html'
+        'signin', {
+          url: '/signin',
+          abstract: true
         }
       )
 
       .state (
-        'tab.dash', {
-          url: '/dash',
-          views: {
-            'tab-dash': {
-              templateUrl: 'templates/tab-dash.html',
-              controller: 'DashCtrl'
-            }
-          }
+        'signin.home', {
+          url: '/signin'
         }
-      )
-
-      .state('tab.account', {
-        url: '/account',
-        views: {
-          'tab-account': {
-            templateUrl: 'templates/tab-account.html',
-            controller: 'AccountCtrl'
-          }
-        }
-      });
-
-    $urlRouterProvider.otherwise ('/tab/dash');
+      );
   }
 );

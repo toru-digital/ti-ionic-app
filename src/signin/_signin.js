@@ -1,1 +1,1 @@
-angular.module ('ti-ionic-app.aignin', []);
+angular.module ('ti-ionic-app.signin', []);

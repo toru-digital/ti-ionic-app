@@ -14,6 +14,6 @@ angular.module ('ti-ionic-app.signin')
         'signin.home', {
           url: '/signin'
         }
-      )
+      );
   }
 );
