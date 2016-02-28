@@ -36,4 +36,10 @@ angular.module (
       }
     );
   }
+)
+
+.config (
+  function ($stateProvider, $urlRouterProvider) {
+    $urlRouterProvider.otherwise ('/app');
+  }
 );
