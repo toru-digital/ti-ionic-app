@@ -31,6 +31,7 @@ to set up an app to develop ti-cms...
 	npm instapp yargs --save;
 
 *add cordova in app broswer plugin*
+
 	cordova plugin add cordova-plugin-inappbrowser
 
 *replace the contents of scss.app.scss with this*
@@ -64,4 +65,4 @@ to set up an app to develop ti-cms...
 	  ]
 	}
 
-* linkedin doesn't work with livereload*
+*linkedin doesn't work with livereload*
