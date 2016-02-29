@@ -1,18 +1,5 @@
-angular.module (
-  'ti-ionic-app',
-  [
-    'ionic',
-    'ti-auth',
-    'ti-ionic-app.dashboard',
-    'ti-ionic-app.home',
-    'ti-ionic-app-templates'
-  ]
-)
-
-
 .run (
   function ($tiAuth) {
-
     $tiAuth.setStates ({
       home : "app.home.index",
       signin : "app.dashboard.signin"
@@ -47,5 +34,3 @@ angular.module (
     );
   }
 );
-
-console.log("TESTING");
