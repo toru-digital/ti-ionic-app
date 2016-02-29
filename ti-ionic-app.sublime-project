@@ -1,0 +1,16 @@
+{
+	"folders":
+	[
+		{
+			"path": "."
+		},
+		{
+			"path":"src",
+			"name" :"app"
+		},
+		{
+			"path":"www/lib/ti-ionic/src",
+			"name" : "ti-ionic"
+		}
+	]
+}
