@@ -3,7 +3,9 @@
   <name>TI Ionic App</name>
   <allow-navigation href="http://172.23.11.21:8100/"/>
   <allow-navigation href="http://172.23.11.22:8100/"/>
+  <allow-navigation href="http://172.23.11.41:8100/"/>
   <allow-navigation href="http://192.168.0.6:8100/"/>
+  <allow-navigation href="https://www.googleapis.com/*"/>
   <description>
         An Ionic Framework and Cordova project.
     </description>
