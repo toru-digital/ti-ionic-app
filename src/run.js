@@ -1,18 +1,14 @@
 angular.module (
-  'ti-ionic-app',
-  [
-    'ionic',
-    'ti-auth',
-    'ti-ionic-app.dashboard',
-    'ti-ionic-app.home',
-    'ti-ionic-app-templates'
-  ]
+  'ti-ionic-app'
 )
-
 
 .run (
   function ($tiAuth) {
-    console.log ("RUN CALLED FROM TI-IONIC");
+    $tiAuth.setStates ({
+      home : "app.home.index",
+      signin : "app.dashboard.signin"
+    });
+
     $tiAuth.addService (
       'ti-cms',
       { 'api' : "http://sealedairdigital.com/divexpress/api/web/v0_10" }
@@ -20,7 +16,9 @@ angular.module (
 
     $tiAuth.addService (
       'google',
-      { clientId : "1051012468372-9a3sj0c4p41bnkcvmftgoqaa57f290vf.apps.googleusercontent.com" }
+      {
+        clientId : "1051012468372-9a3sj0c4p41bnkcvmftgoqaa57f290vf.apps.googleusercontent.com"
+      }
     );
 
     $tiAuth.addService (
@@ -40,5 +38,3 @@ angular.module (
     );
   }
 );
-
-console.log("TESTING");
