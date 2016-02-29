@@ -82,7 +82,7 @@ gulp.task (
     );
 
     gulp.watch (
-      ['./scss/**/*.scss'],
+      ['./src/**/*.scss'],
       ['sass']
     );
   }
