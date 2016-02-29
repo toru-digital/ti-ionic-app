@@ -14,23 +14,25 @@ to set up an app to develop ti-cms...
 
 	bower install ng-cordova-oauth ngCordova --save-dev
 
-	npm instapp gulp --save;
-	npm instapp gulp-concat --save;
-	npm instapp gulp-if --save;
-	npm instapp gulp-jshint --save;
-	npm instapp gulp-minify-css --save;
-	npm instapp gulp-ng-html2js --save;
-	npm instapp gulp-rename --save;
-	npm instapp gulp-sass --save;
-	npm instapp gulp-strip-debug --save;
-	npm instapp gulp-uglify --save;
-	npm instapp gulp-util --save;
-	npm instapp gulp-notify --save;
-	npm instapp jshint --save;
-	npm instapp jshint-stylish --save;
-	npm instapp yargs --save;
+	npm install gulp --save;
+	npm install gulp-concat --save;
+	npm install gulp-if --save;
+	npm install gulp-jshint --save;
+	npm install gulp-minify-css --save;
+	npm install gulp-ng-html2js --save;
+	npm install gulp-rename --save;
+	npm install gulp-sass --save;
+	npm install gulp-strip-debug --save;
+	npm install gulp-uglify --save;
+	npm install gulp-util --save;
+	npm install gulp-notify --save;
+	npm install gulp-sort --save;
+	npm install jshint --save;
+	npm install jshint-stylish --save;
+	npm install yargs --save;
 
-*add cordova in app broswer plugin
+*add cordova in app broswer plugin*
+
 	cordova plugin add cordova-plugin-inappbrowser
 
 *replace the contents of scss.app.scss with this*
@@ -64,4 +66,4 @@ to set up an app to develop ti-cms...
 	  ]
 	}
 
-* linkedin doesn't work with livereload
+*linkedin doesn't work with livereload*
