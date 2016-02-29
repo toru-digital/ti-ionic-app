@@ -131,6 +131,10 @@ angular.module (
   }
 );
 
+angular.module (
+  'ti-ionic-app'
+)
+
 .run (
   function ($tiAuth) {
     $tiAuth.setStates ({
