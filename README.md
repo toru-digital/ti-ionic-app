@@ -18,7 +18,6 @@ to set up an app to develop ti-cms...
 	npm install gulp-babel --save;
 	npm install gulp-concat --save;
 	npm install gulp-if --save;
-	npm install gulp-jscs --save;
 	npm install gulp-jshint --save;
 	npm install gulp-minify-css --save;
 	npm install gulp-ng-html2js --save;
