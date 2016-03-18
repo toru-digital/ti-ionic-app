@@ -16,6 +16,7 @@ to set up an app to develop ti-cms...
 
 	npm install gulp --save;
 	npm install gulp-babel --save;
+	npm install babel-preset-es2015 --save;
 	npm install gulp-concat --save;
 	npm install gulp-if --save;
 	npm install gulp-jshint --save;
