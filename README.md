@@ -71,7 +71,7 @@ to set up an app to develop ti-cms...
 *import the script into www/index.html*
 
   
-  <script src="lib/ti-ionic/tmp/ti-ionic.js"></script>
+  `<script src="lib/ti-ionic/tmp/ti-ionic.js"></script>`
 
 
 *linkedin doesn't work with livereload*
