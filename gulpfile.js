@@ -1,20 +1,18 @@
-var gulp        = require ('gulp');
-var concat      = require ('gulp-concat');
-var gulpif      = require ('gulp-if');
-var jshint      = require ('gulp-jshint');
-var minifyCss   = require ('gulp-minify-css');
-var ngHtml2Js   = require ("gulp-ng-html2js");
-var rename      = require ('gulp-rename');
-var sass        = require ('gulp-sass');
-var sort        = require ('gulp-sort');
-var stripDebug  = require ('gulp-strip-debug');
-var uglify      = require ('gulp-uglify');
-var stylish     = require ('jshint-stylish');
-var yargs       = require ('yargs').argv;
-var notify      = require ("gulp-notify");
+var gulp        = require ('gulp')
+var concat      = require ('gulp-concat')
+var gulpif      = require ('gulp-if')
+var minifyCss   = require ('gulp-minify-css')
+var ngHtml2Js   = require ('gulp-ng-html2js')
+var rename      = require ('gulp-rename')
+var eslint      = require ('gulp-eslint')
+var sass        = require ('gulp-sass')
+var sort        = require ('gulp-sort')
+var stripDebug  = require ('gulp-strip-debug')
+var uglify      = require ('gulp-uglify')
+var yargs       = require ('yargs').argv
 
-require ('./www/lib/ti-ionic/gulp-tasks/scripts')(gulp, yargs);
-var IS_RELEASE_BUILD  = yargs.r || yargs.release;
+require ('./www/lib/ti-ionic/gulp-tasks/scripts') (gulp, yargs)
+var IS_RELEASE_BUILD  = yargs.r || yargs.release
 
 gulp.task (
   'sass',
@@ -23,20 +21,20 @@ gulp.task (
       .pipe (sass ())
       .on ('error', sass.logError)
       .pipe (gulp.dest ('./www/css/'))
-      .pipe (gulpif (IS_RELEASE_BUILD, minifyCss ({keepSpecialComments: 0})))
-      .pipe (rename ({extname: '.min.css'}))
-      .pipe (gulp.dest ('./www/css/'));
+      .pipe (gulpif (IS_RELEASE_BUILD, minifyCss ({ keepSpecialComments : 0 })))
+      .pipe (rename ({ extname : '.min.css' }))
+      .pipe (gulp.dest ('./www/css/'))
   }
-);
+)
 
 gulp.task (
   'html',
   function () {
     return gulp
-      .src ("./src/**/*.tpl.html")
-      .pipe (ngHtml2Js ({moduleName: "ti-ionic-app-templates" }))
-      .pipe (concat ("templates.js"))
-      .pipe (gulp.dest ("./tmp"));
+      .src ('./src/**/*.tpl.html')
+      .pipe (ngHtml2Js ({ moduleName : 'ti-ionic-app-templates' }))
+      .pipe (concat ('templates.js'))
+      .pipe (gulp.dest ('./tmp'))
   }
 )
 
@@ -44,46 +42,45 @@ gulp.task (
   'js',
   function () {
     return gulp
-      .src ("./src/**/*.js")
+      .src ('./src/**/*.js')
       .pipe (sort ())
       .pipe (gulpif (IS_RELEASE_BUILD, stripDebug ()))
-      .pipe (jshint ())
-      .pipe (jshint.reporter (stylish))
-      // .pipe (jshint.reporter ('fail'))
+      .pipe (eslint ())
+      .pipe (eslint.format ())
       .pipe (concat ('script.js'))
-      .pipe (gulp.dest ('./tmp'));
+      .pipe (gulp.dest ('./tmp'))
   }
-);
+)
 
 gulp.task (
   'scripts',
-  ['html', 'js'],
+  [ 'html', 'js' ],
   function () {
     return gulp
-      .src (["./tmp/templates.js", "./tmp/script.js"])
+      .src ([ './tmp/templates.js', './tmp/script.js' ])
         .pipe (concat ('ti-ionic-app.js'))
         .pipe (gulp.dest ('./www/js'))
         .pipe (gulpif (IS_RELEASE_BUILD, uglify ()))
-        .pipe (rename ({ extname: '.min.js' }))
-        .pipe (gulp.dest ('./www/js'));
+        .pipe (rename ({ extname : '.min.js' }))
+        .pipe (gulp.dest ('./www/js'))
   }
-);
+)
 
 gulp.task (
   'watch',
-  ['ti-watch'],
+  [ 'ti-watch' ],
   function () {
     gulp.watch (
       [
-        "./src/**/*.js",
-        "./src/**/*.tpl.html"
+        './src/**/*.js',
+        './src/**/*.tpl.html',
       ],
-      ['scripts']
-    );
+      [ 'scripts' ]
+    )
 
     gulp.watch (
-      ['./src/**/*.scss'],
-      ['sass']
-    );
+      [ './src/**/*.scss' ],
+      [ 'sass' ]
+    )
   }
-);
+)
