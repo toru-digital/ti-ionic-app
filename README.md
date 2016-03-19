@@ -28,8 +28,7 @@ to set up an app to develop ti-cms...
 			"jquery": "~2.1.4",
 			"ng-cordova-oauth": "^0.2.3",
 			"ngCordova": "^0.1.24-alpha",
-			"platform.js": "platform#~1.3.1",
-			"ti-ionic": "0.3.*"
+			"platform.js": "platform#~1.3.1"
 		},
 		"resolutions": {
 			"angular": "1.5.*",
