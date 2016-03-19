@@ -1,17 +1,17 @@
 angular.module ('ti-ionic-app.home')
 
 .controller (
-	"IndexCtrl",
+	'IndexCtrl',
 	function ($scope, $tiToast) {
 
-		// $tiAuth
-    // $scope.signout = function ($) {
-		// 	console.log ("I'M HERE");
-    //   $tiAuth.signout ();
-    // };
+  // $tiAuth
+  // $scope.signout = function ($) {
+  // 	console.log ("I'M HERE");
+  //   $tiAuth.signout ();
+  // };
 
-		$scope.toast = function () {
-			$tiToast.say ("HELLO");
-		}
+  $scope.toast = function () {
+    $tiToast.say ('HELLO')
   }
-);
+}
+)

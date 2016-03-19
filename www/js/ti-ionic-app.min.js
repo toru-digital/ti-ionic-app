@@ -87,47 +87,49 @@ angular.module ('ti-ionic-app.home', [ 'ti-ionic.utils' ])
 angular.module ('ti-ionic-app.home')
 
 .controller (
-	"IndexCtrl",
+	'IndexCtrl',
 	function ($scope, $tiToast) {
 
-		// $tiAuth
-    // $scope.signout = function ($) {
-		// 	console.log ("I'M HERE");
-    //   $tiAuth.signout ();
-    // };
+  // $tiAuth
+  // $scope.signout = function ($) {
+  // 	console.log ("I'M HERE");
+  //   $tiAuth.signout ();
+  // };
 
-		$scope.toast = function () {
-			$tiToast.say ("HELLO");
-		}
+  $scope.toast = function () {
+    $tiToast.say ('HELLO')
   }
-);
+}
+)
 
 angular.module ('ti-ionic-app.home')
 
 .config (
-  function ($stateProvider, USER_ROLES) {
+  function ($stateProvider) {
     $stateProvider
       .state (
         'app.home', {
-          url: '/home',
-          abstract: true,
-          template : "<ion-nav-view></ion-nav-view>",
-          // data : {
-      		//   role : USER_ROLES.user
-      		// }
+          url : '/home',
+          abstract : true,
+          template : '<ion-nav-view></ion-nav-view>',
+
+          // USER_ROLES
+          //data : {
+          //   role : USER_ROLES.user
+          // }
         }
       )
 
       .state (
         'app.home.index', {
-          url: '/index',
-          controller : "IndexCtrl",
-          cpmtrollerAs : "_index",
-          templateUrl : "home/index.tpl.html"
+          url : '/index',
+          controller : 'IndexCtrl',
+          cpmtrollerAs : '_index',
+          templateUrl : 'home/index.tpl.html',
         }
-      );
+      )
   }
-);
+)
 
 angular.module (
   'ti-ionic-app'
@@ -135,16 +137,16 @@ angular.module (
 
 .config (
   function ($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise ("/app/home/index");
+    $urlRouterProvider.otherwise ('/app/home/index')
     $stateProvider.state (
       'app', {
-        url: '/app',
-        abstract: true,
-        template : "<ion-nav-view></ion-nav-view>"
+        url : '/app',
+        abstract : true,
+        template : '<ion-nav-view></ion-nav-view>',
       }
-    );
+    )
   }
-);
+)
 
 angular.module (
   'ti-ionic-app'
@@ -181,4 +183,4 @@ angular.module (
     //   }
     // );
   }
-);
+)

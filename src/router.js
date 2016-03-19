@@ -4,13 +4,13 @@ angular.module (
 
 .config (
   function ($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise ("/app/home/index");
+    $urlRouterProvider.otherwise ('/app/home/index')
     $stateProvider.state (
       'app', {
-        url: '/app',
-        abstract: true,
-        template : "<ion-nav-view></ion-nav-view>"
+        url : '/app',
+        abstract : true,
+        template : '<ion-nav-view></ion-nav-view>',
       }
-    );
+    )
   }
-);
+)
