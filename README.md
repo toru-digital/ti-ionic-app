@@ -10,9 +10,35 @@ to set up an app to develop ti-cms...
 
 	ionic setup sass
 
-*add bower and npm dependencies*
+*make sure your bower includes the following devDependencies and resolutions, install.
 
-	bower install ng-cordova-oauth ngCordova --save-dev
+	{
+		"name": "my-app-name",
+		"devDependencies": {
+			"angular-animate": "1.5.*",
+			"angular-dynamic-locale": "0.1.*",
+			"angular-mandrill": "^0.0.2",
+			"angular-resource": "1.5.*",
+			"angular-sanitize": "1.5.*",
+			"angular-translate-loader-static-files": "^2.9.0",
+			"angular-translate": "2.10.*",
+			"angular-ui-router": "0.2.*",
+			"angular": "1.5.*",
+			"ionic": "driftyco/ionic-bower#1.2.4",
+			"jquery": "~2.1.4",
+			"ng-cordova-oauth": "^0.2.3",
+			"ngCordova": "^0.1.24-alpha",
+			"platform.js": "platform#~1.3.1",
+			"ti-ionic": "0.2.9"
+		},
+		"resolutions": {
+			"angular": "1.5.*",
+			"angular-animate": "1.5.*",
+			"angular-sanitize": "1.5.*"
+		}
+	}
+
+*add node packages*
 
 	npm install babel-preset-es2015 --save;
 	npm install gulp --save;
@@ -73,15 +99,14 @@ to set up an app to develop ti-cms...
 
 *import the script into www/index.html*
 
-
   `<script src="lib/ti-ionic/tmp/ti-ionic.js"></script>`
 
-*replace the ionic-bundle.js with the unbundled scripts (so we can use angular 1.5)*
+*replace the ionic-bundle.js script import in www/index.html with the following
+(so we can use angular 1.5)*
 
-	~<script src="lib/ionic/js/ionic.bundle.js"></script>~
-	`<script src="lib/angular-animate/angular-animate.min.js"></script>`
-	`<script src="lib/angular-resource/angular-resource.min.js"></script>`
-	`<script src="lib/angular-sanitize/angular-sanitize.min.js"></script>`
-	`<script src="lib/angular/angular.min.js"></script>`
-	`<script src="lib/ionic/js/ionic-angular.js"></script>`
-	`<script src="lib/ionic/js/ionic.js"></script>`
+	<script src="lib/angular-animate/angular-animate.min.js"></script>
+	<script src="lib/angular-resource/angular-resource.min.js"></script>
+	<script src="lib/angular-sanitize/angular-sanitize.min.js"></script>
+	<script src="lib/angular/angular.min.js"></script>
+	<script src="lib/ionic/js/ionic-angular.js"></script>
+	<script src="lib/ionic/js/ionic.js"></script>
