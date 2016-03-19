@@ -43,11 +43,12 @@ branch. note: make suer there's a www/lib folder there before installing*
 *add node packages*
 
 	npm install babel-preset-es2015 --save;
+	npm install eslint --save;
 	npm install gulp --save;
 	npm install gulp-babel --save;
 	npm install gulp-concat --save;
+	npm install gulp-eslint --save;
 	npm install gulp-if --save;
-	npm install gulp-jshint --save;
 	npm install gulp-minify-css --save;
 	npm install gulp-ng-html2js --save;
 	npm install gulp-notify --save;
@@ -58,8 +59,6 @@ branch. note: make suer there's a www/lib folder there before installing*
 	npm install gulp-tape --save;
 	npm install gulp-uglify --save;
 	npm install gulp-util --save;
-	npm install jshint --save;
-	npm install jshint-stylish --save;
 	npm install tap-colorize --save;
 	npm install tape --save;
 	npm install yargs --save;

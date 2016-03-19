@@ -1,0 +1,38 @@
+{
+  "rules": {
+    "quotes": [
+      2,
+      "single"
+    ],
+    "linebreak-style": [
+      2,
+      "unix"
+    ],
+    "semi": [
+      2,
+      "never"
+    ],
+    "no-console" : [
+      1
+    ],
+    "no-unused-vars" : [
+      1
+    ],
+    "comma-dangle" : [
+      0
+    ],
+    "no-mixed-spaces-and-tabs" : [
+      1
+    ]
+  },
+  "env": {
+    "es6": true,
+    "browser" : true,
+    "jquery" : true
+  },
+  "globals": {
+    "angular": true,
+    "gapi" : true
+  },
+  "extends": "eslint:recommended"
+}
