@@ -27,10 +27,15 @@ module.run(['$templateCache', function($templateCache) {
     '  <ion-content>\n' +
     '    <div class="padding">\n' +
     '\n' +
-    '      <p>$tiToast test...</p>\n' +
+    '      <p>$tiToast...</p>\n' +
     '      <div class="button button-calm" ng-click="toast()">\n' +
     '        say hello\n' +
     '      </div>\n' +
+    '\n' +
+    '      <br>\n' +
+    '      <br>\n' +
+    '      <p>tiButton...</p>\n' +
+    '      <ti-button class="button button-calm">Click</ti-button>\n' +
     '\n' +
     '      <!-- <div class="button button-calm" ng-click="signout()">\n' +
     '        sign out\n' +
