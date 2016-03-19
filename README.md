@@ -10,7 +10,7 @@ to set up an app to develop ti-cms...
 
 	ionic setup sass
 
-*make sure your bower includes the following devDependencies and resolutions, install.*
+*make sure your bower includes the following devDependencies and resolutions.*
 
 	{
 		"name": "my-app-name",
@@ -36,6 +36,9 @@ to set up an app to develop ti-cms...
 			"angular-sanitize": "1.5.*"
 		}
 	}
+
+*after running `bower-update` clone the ti-ionic repo into `www/lib` and choose your
+branch. note: make suer there's a www/lib folder there before installing*
 
 *add node packages*
 
