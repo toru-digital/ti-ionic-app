@@ -105,21 +105,21 @@ branch. note: make suer there's a www/lib folder there before installing*
 
 *import the following scripts (note no ionic.bundle.js - so we can use ajs v1.5)*
 
-<!-- scripts -->
-<script src="cordova.js"></script>
-<script src="lib/angular/angular.min.js"></script>
-<script src="lib/ionic/js/ionic.js"></script>
-<script src="lib/ionic/js/ionic-angular.js"></script>
-<script src="lib/angular-animate/angular-animate.min.js"></script>
-<script src="lib/angular-dynamic-locale/dist/tmhDynamicLocale.min.js"></script>
-<script src="lib/angular-mandrill/dist/angular-mandrill.js"></script>
-<script src="lib/angular-resource/angular-resource.min.js"></script>
-<script src="lib/angular-sanitize/angular-sanitize.min.js"></script>
-<script src="lib/angular-translate/angular-translate.min.js"></script>
-<script src="lib/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
-<script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
-<script src="lib/ng-cordova-oauth/dist/ng-cordova-oauth.min.js"></script>
-<script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
-<script src="lib/ti-ionic/tmp/ti-ionic.js"></script>
-<!-- // -->
-<script src="js/ti-ionic-app.min.js"></script>
+	<!-- scripts -->
+	<script src="cordova.js"></script>
+	<script src="lib/angular/angular.min.js"></script>
+	<script src="lib/ionic/js/ionic.js"></script>
+	<script src="lib/ionic/js/ionic-angular.js"></script>
+	<script src="lib/angular-animate/angular-animate.min.js"></script>
+	<script src="lib/angular-dynamic-locale/dist/tmhDynamicLocale.min.js"></script>
+	<script src="lib/angular-mandrill/dist/angular-mandrill.js"></script>
+	<script src="lib/angular-resource/angular-resource.min.js"></script>
+	<script src="lib/angular-sanitize/angular-sanitize.min.js"></script>
+	<script src="lib/angular-translate/angular-translate.min.js"></script>
+	<script src="lib/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
+	<script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script src="lib/ng-cordova-oauth/dist/ng-cordova-oauth.min.js"></script>
+	<script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
+	<script src="lib/ti-ionic/tmp/ti-ionic.js"></script>
+	<!-- // -->
+	<script src="js/ti-ionic-app.min.js"></script>
