@@ -15,6 +15,8 @@ to set up an app to develop ti-cms...
 	bower install ng-cordova-oauth ngCordova --save-dev
 
 	npm install gulp --save;
+	npm install gulp-babel --save;
+	npm install babel-preset-es2015 --save;
 	npm install gulp-concat --save;
 	npm install gulp-if --save;
 	npm install gulp-jshint --save;
@@ -62,8 +64,14 @@ to set up an app to develop ti-cms...
 		"!www/css/**/*",
 		"www/css/**/*.min.css",
 		"!www/lib/**/*",
-		"www/lib/ti-ionic/dist/*.min.js"
+		"www/lib/ti-ionic/tmp/ti-ionic.js"
 	  ]
 	}
+
+*import the script into www/index.html*
+
+  
+  `<script src="lib/ti-ionic/tmp/ti-ionic.js"></script>`
+
 
 *linkedin doesn't work with livereload*
