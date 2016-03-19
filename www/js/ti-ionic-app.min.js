@@ -49,11 +49,11 @@ angular.module (
     'ti-ionic',
     'ti-ionic-app.dashboard',
     'ti-ionic-app.home',
-    'ti-ionic-app-templates'
+    'ti-ionic-app-templates',
   ]
-);
+)
 
-angular.module ('ti-ionic-app.dashboard', []);
+angular.module ('ti-ionic-app.dashboard', [])
 
 angular.module ('ti-ionic-app.dashboard')
 
@@ -64,23 +64,23 @@ angular.module ('ti-ionic-app.dashboard')
         'app.dashboard', {
           url : '/dashboard',
           abstract : true,
-          template : "<ion-nav-view></ion-nav-view>",
+          template : '<ion-nav-view></ion-nav-view>',
           data : {
-      		  role : USER_ROLES.guest
-      		}
+            role : USER_ROLES.guest,
+          },
         }
       )
 
       .state (
         'app.dashboard.signin', {
-          url: '/signin',
-          templateUrl : "dashboard/signin.tpl.html"
+          url : '/signin',
+          templateUrl : 'dashboard/signin.tpl.html',
         }
-      );
+      )
   }
-);
+)
 
-angular.module ('ti-ionic-app.home', ['ti-ionic.utils']);
+angular.module ('ti-ionic-app.home', [ 'ti-ionic.utils' ])
 
 //'ti-auth'
 

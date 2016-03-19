@@ -5,6 +5,6 @@ angular.module (
     'ti-ionic',
     'ti-ionic-app.dashboard',
     'ti-ionic-app.home',
-    'ti-ionic-app-templates'
+    'ti-ionic-app-templates',
   ]
-);
+)
