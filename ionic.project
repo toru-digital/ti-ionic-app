@@ -11,6 +11,6 @@
     "www/img/*.*",
     "www/css/*.min.css",
     "www/js/*.min.js",
-    "www/lib/ti-ionic/dist/*.min.js"
+    "www/lib/ti-ionic/tmp/ti-ionic.js"
   ]
 }

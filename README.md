@@ -14,23 +14,26 @@ to set up an app to develop ti-cms...
 
 	bower install ng-cordova-oauth ngCordova --save-dev
 
+	npm install babel-preset-es2015 --save;
 	npm install gulp --save;
 	npm install gulp-babel --save;
-	npm install babel-preset-es2015 --save;
 	npm install gulp-concat --save;
 	npm install gulp-if --save;
 	npm install gulp-jshint --save;
 	npm install gulp-minify-css --save;
 	npm install gulp-ng-html2js --save;
+	npm install gulp-notify --save;
 	npm install gulp-rename --save;
 	npm install gulp-sass --save;
+	npm install gulp-sort --save;
 	npm install gulp-strip-debug --save;
+	npm install gulp-tape --save;
 	npm install gulp-uglify --save;
 	npm install gulp-util --save;
-	npm install gulp-notify --save;
-	npm install gulp-sort --save;
 	npm install jshint --save;
 	npm install jshint-stylish --save;
+	npm install tap-colorize --save;
+	npm install tape --save;
 	npm install yargs --save;
 
 *add cordova in app broswer plugin*
@@ -70,8 +73,15 @@ to set up an app to develop ti-cms...
 
 *import the script into www/index.html*
 
-  
+
   `<script src="lib/ti-ionic/tmp/ti-ionic.js"></script>`
 
+*replace the ionic-bundle.js with the unbundled scripts (so we can use angular 1.5)*
 
-*linkedin doesn't work with livereload*
+	`~~<script src="lib/ionic/js/ionic.bundle.js"></script>~~`
+	`<script src="lib/angular-animate/angular-animate.min.js"></script>`
+	`<script src="lib/angular-resource/angular-resource.min.js"></script>`
+	`<script src="lib/angular-sanitize/angular-sanitize.min.js"></script>`
+	`<script src="lib/angular/angular.min.js"></script>`
+	`<script src="lib/ionic/js/ionic-angular.js"></script>`
+	`<script src="lib/ionic/js/ionic.js"></script>`
