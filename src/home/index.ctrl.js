@@ -9,5 +9,9 @@ angular.module ('ti-ionic-app.home')
 		// 	console.log ("I'M HERE");
     //   $tiAuth.signout ();
     // };
+
+		$scope.toast = function () {
+			console.log ("HELLO");
+		}
   }
 );

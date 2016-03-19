@@ -26,9 +26,15 @@ module.run(['$templateCache', function($templateCache) {
     '<ion-view>\n' +
     '  <ion-content>\n' +
     '    <div class="padding">\n' +
-    '      <div class="button button-calm" ng-click="signout()">\n' +
-    '        sign out\n' +
+    '\n' +
+    '      <p>$tiToast test...</p>\n' +
+    '      <div class="button button-calm" ng-click="toast()">\n' +
+    '        say hello\n' +
     '      </div>\n' +
+    '\n' +
+    '      <!-- <div class="button button-calm" ng-click="signout()">\n' +
+    '        sign out\n' +
+    '      </div> -->\n' +
     '    </div>\n' +
     '  </ion-content>\n' +
     '</ion-view>\n' +
@@ -89,6 +95,10 @@ angular.module ('ti-ionic-app.home')
 		// 	console.log ("I'M HERE");
     //   $tiAuth.signout ();
     // };
+
+		$scope.toast = function () {
+			console.log ("HELLO");
+		}
   }
 );
 
