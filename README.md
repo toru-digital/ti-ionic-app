@@ -10,7 +10,7 @@ to set up an app to develop ti-cms...
 
 	ionic setup sass
 
-*make sure your bower includes the following devDependencies and resolutions, install.
+*make sure your bower includes the following devDependencies and resolutions, install.*
 
 	{
 		"name": "my-app-name",
