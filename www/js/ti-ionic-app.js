@@ -80,7 +80,7 @@ angular.module ('ti-ionic-app.dashboard')
   }
 );
 
-angular.module ('ti-ionic-app.home', []);
+angular.module ('ti-ionic-app.home', ['ti-ionic.utils']);
 
 //'ti-auth'
 
@@ -88,7 +88,7 @@ angular.module ('ti-ionic-app.home')
 
 .controller (
 	"IndexCtrl",
-	function ($scope) {
+	function ($scope, $tiToast) {
 
 		// $tiAuth
     // $scope.signout = function ($) {
@@ -97,7 +97,7 @@ angular.module ('ti-ionic-app.home')
     // };
 
 		$scope.toast = function () {
-			console.log ("HELLO");
+			$tiToast.say ("HELLO");
 		}
   }
 );
