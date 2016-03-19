@@ -78,7 +78,7 @@ to set up an app to develop ti-cms...
 
 *replace the ionic-bundle.js with the unbundled scripts (so we can use angular 1.5)*
 
-	`~~<script src="lib/ionic/js/ionic.bundle.js"></script>~~`
+	~~<script src="lib/ionic/js/ionic.bundle.js"></script>~~
 	`<script src="lib/angular-animate/angular-animate.min.js"></script>`
 	`<script src="lib/angular-resource/angular-resource.min.js"></script>`
 	`<script src="lib/angular-sanitize/angular-sanitize.min.js"></script>`
