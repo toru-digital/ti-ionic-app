@@ -1,1 +1,3 @@
-angular.module ('ti-ionic-app.home', ['ti-auth']);
+angular.module ('ti-ionic-app.home', []);
+
+//'ti-auth'
