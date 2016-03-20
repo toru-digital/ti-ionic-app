@@ -1,6 +1,6 @@
 module.exports = function (gulp, isRelease) {
   var paths = {
-    scss : {
+    sass : {
       dist : './www/css/',
       entry : './src/main.scss',
       src : './src/**/*.scss',
@@ -22,8 +22,6 @@ module.exports = function (gulp, isRelease) {
 
   gulp.task ('watch', [ 'ti-watch' ], function () {
     gulp.watch ([ paths.scripts.src, paths.templates ], [ 'scripts' ])
-
-    //, paths.templates
-    //gulp.watch ([ paths.scss.src ], [ 'sass' ])
+    gulp.watch ([ paths.sass.src ], [ 'sass' ])
   })
 }
