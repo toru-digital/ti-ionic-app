@@ -1,12 +1,12 @@
 'use strict'
 
-import angular from 'angular'
-
-module.exports = function () {
-
+let router = function ($stateProvider1, $urlRouterProvider1) {
+  console.log ($stateProvider1, $urlRouterProvider1)
 }
 
-//$stateProvider, $urlRouterProvider
+module.exports = [ '$stateProvider', '$urlRouterProvider', router ]
+
+//
 // $urlRouterProvider.otherwise ('/app/home/index')
 // $stateProvider.state (
 //   'app', {

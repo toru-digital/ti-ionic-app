@@ -1,8 +1,9 @@
 'use strict'
 
-import angular from 'angular'
+var angular = require ('angular')
 
 // import ionic from 'ionic'
+
 // import dashboard from './modules/dashboard/dashboard'
 // import home from './modules/home/home'
 // ionic,
@@ -10,6 +11,6 @@ import angular from 'angular'
 // home,
 /* 'ti-ionic' */
 
-module.exports = angular.module ('my-app', [])
+module.exports = angular.module ('my-app', [ 'ngRoute' ])
   .config (require ('./router'))
   .run (require ('./run'))

@@ -1,12 +1,7 @@
 'use strict'
 
-import angular from 'angular'
-
 module.exports = function () {
-
 }
-
-//.run (function () {})
 
 // $tiAuth
 // $tiAuth.addService (
@@ -22,7 +17,7 @@ module.exports = function () {
 // );
 //
 // $tiAuth.addService (
-//   'linkedin',
+//   'linkedin'
 //   {
 //     clientId : "77a0cl3zsyie76",
 //     clientSecret : "Dzpj0CzJnTum3ttY"
