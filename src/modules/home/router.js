@@ -1,5 +1,7 @@
 'use strict'
 
+require ('./home.html')
+
 let Router = function ($stateProvider) {
   $stateProvider.state ('app.home', {
     url : '/home',
@@ -16,10 +18,8 @@ let Router = function ($stateProvider) {
     url : '/index',
     controller : 'HomeController',
     cpmtrollerAs : '$home',
-    template : '<div>!</div>',
+    templateUrl : 'home.html',
   })
 }
 
 module.exports = [ '$stateProvider', Router ]
-
-// templateUrl : 'home/index.tpl.html',
