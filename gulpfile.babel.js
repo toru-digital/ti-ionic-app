@@ -11,8 +11,8 @@ var stripDebug  = require ('gulp-strip-debug')
 var uglify      = require ('gulp-uglify')
 var yargs       = require ('yargs').argv
 
-require ('./www/lib/ti-ionic/gulp-tasks/scripts') (gulp, yargs)
-var IS_RELEASE_BUILD  = yargs.r || yargs.release
+const isRelease = yargs.r || yargs.release
+require ('./www/lib/ti-ionic/gulp-tasks/main') (gulp, isRelease)
 
 gulp.task (
   'sass',
@@ -21,7 +21,7 @@ gulp.task (
       .pipe (sass ())
       .on ('error', sass.logError)
       .pipe (gulp.dest ('./www/css/'))
-      .pipe (gulpif (IS_RELEASE_BUILD, minifyCss ({ keepSpecialComments : 0 })))
+      .pipe (gulpif (isRelease, minifyCss ({ keepSpecialComments : 0 })))
       .pipe (rename ({ extname : '.min.css' }))
       .pipe (gulp.dest ('./www/css/'))
   }
@@ -44,7 +44,7 @@ gulp.task (
     return gulp
       .src ('./src/**/*.js')
       .pipe (sort ())
-      .pipe (gulpif (IS_RELEASE_BUILD, stripDebug ()))
+      .pipe (gulpif (isRelease, stripDebug ()))
       .pipe (eslint ())
       .pipe (eslint.format ())
       .pipe (concat ('script.js'))
@@ -60,7 +60,7 @@ gulp.task (
       .src ([ './tmp/templates.js', './tmp/script.js' ])
         .pipe (concat ('ti-ionic-app.js'))
         .pipe (gulp.dest ('./www/js'))
-        .pipe (gulpif (IS_RELEASE_BUILD, uglify ()))
+        .pipe (gulpif (isRelease, uglify ()))
         .pipe (rename ({ extname : '.min.js' }))
         .pipe (gulp.dest ('./www/js'))
   }
