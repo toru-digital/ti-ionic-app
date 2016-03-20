@@ -18,8 +18,11 @@
     "browserify": "^13.0.0",
     "browserify-shim": "^3.8.12",
     "gulp-if": "^2.0.0",
+    "gulp-tape": "0.0.7",
     "gulp-util": "^2.2.14",
     "shelljs": "^0.3.0",
+    "tap-colorize": "^1.2.0",
+    "tape": "^4.5.1",
     "vinyl-source-stream": "^1.1.0"
   },
   "cordovaPlugins": [

@@ -20,12 +20,10 @@ module.exports = function (gulp, isRelease) {
 
   gulp.task ('default', [ 'scripts', 'watch' ])
 
-  gulp.task ('watch', function () {
+  gulp.task ('watch', [ 'ti-watch' ], function () {
     gulp.watch ([ paths.scripts.src ], [ 'scripts' ])
 
     //, paths.templates
-    //[ 'ti-watch' ]
     //gulp.watch ([ paths.scss.src ], [ 'sass' ])
-    //
   })
 }
