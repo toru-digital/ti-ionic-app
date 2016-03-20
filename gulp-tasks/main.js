@@ -2,12 +2,12 @@ module.exports = function (gulp, isRelease) {
   let paths = {
     scss : {
       dist : './www/css/',
-      entry : './src/ti-ionic-app.scss',
+      entry : './src/main.scss',
       src : './src/**/*.scss',
     },
     scripts : {
       dist : './www/js',
-      entry : './src/ti-ionic-app.js',
+      entry : './src/main.js',
       src : './src/**/*.js',
     },
     templates : './src/**/*.tpl.html',

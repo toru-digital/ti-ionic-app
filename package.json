@@ -45,5 +45,36 @@
       "version": "",
       "locator": "ios"
     }
-  ]
+  ],
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "browserify-shim": "^3.8.12",
+    "gulp-jshint": "^2.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+
+  "scripts": {
+    "install": "napa"
+  },
+
+  "napa": {
+    "angular": "angular/bower-angular#v1.3.13",
+    "ionic": "driftyco/ionic-bower#v1.0.0"
+  },
+
+  "browser": {
+    "ionic": "./node_modules/ionic/js/ionic.js",
+    "angular": "./node_modules/angular/angular.js"
+  },
+
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+
+  "browserify-shim": {
+    "angular": "angular",
+    "ionic": "ionic"
+  }
 }
