@@ -9,7 +9,7 @@
     "www/index.html",
     "www/img/*.*",
     "www/css/*.min.css",
-    "www/js/*.min.js",
+    "www/js/bundle.js",
     "www/lib/ti-ionic/tmp/ti-ionic.js"
   ]
 }

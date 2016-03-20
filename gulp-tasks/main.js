@@ -10,7 +10,7 @@ module.exports = function (gulp, isRelease) {
       entry : './src/main.js',
       src : './src/**/*.js',
     },
-    templates : './src/**/*.tpl.html',
+    templates : './src/**/*.html',
     tmp : './tmp',
   }
 
@@ -21,7 +21,7 @@ module.exports = function (gulp, isRelease) {
   gulp.task ('default', [ 'scripts', 'watch' ])
 
   gulp.task ('watch', [ 'ti-watch' ], function () {
-    gulp.watch ([ paths.scripts.src ], [ 'scripts' ])
+    gulp.watch ([ paths.scripts.src, paths.templates ], [ 'scripts' ])
 
     //, paths.templates
     //gulp.watch ([ paths.scss.src ], [ 'sass' ])
