@@ -1,5 +1,5 @@
 module.exports = function (gulp, isRelease) {
-  let paths = {
+  var paths = {
     scss : {
       dist : './www/css/',
       entry : './src/main.scss',

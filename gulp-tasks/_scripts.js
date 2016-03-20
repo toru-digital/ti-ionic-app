@@ -1,5 +1,5 @@
 module.exports = function (gulp, paths, isRelease) {
-  gulp.task ('scripts', [ 'ti-compile-templates' ], function () {
+  gulp.task ('scripts', function () {
     let babelify = require ('babelify')
     let browserify = require ('browserify')
     let source = require ('vinyl-source-stream')
@@ -12,6 +12,7 @@ module.exports = function (gulp, paths, isRelease) {
   })
 }
 
+// [ 'ti-compile-templates' ],
 // gulp.task ('html', function () {
 //   let concat = require ('gulp-concat')
 //   let ngHtml2Js = require ('gulp-ng-html2js')
