@@ -1,3 +1,3 @@
-angular.module ('ti-ionic-app.home', [ 'ti-ionic.utils' ])
+module.exports = angular.module ('my-app.home', [])
 
-//'ti-auth'
+// 'ti-ionic.utils'

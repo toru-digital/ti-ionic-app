@@ -1,1 +1,3 @@
-angular.module ('ti-ionic-app.dashboard', [])
+'use-strict'
+
+module.exports = angular.module ('my-app.dashboard', [])
