@@ -1,3 +1,5 @@
+module.exports = function (gulp, paths, isRelease) {}
+
 // gulp.task ('sass', function () {
 //   let gulpif = require ('gulp-if')
 //   let minifyCss = require ('gulp-minify-css')

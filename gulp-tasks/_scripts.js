@@ -1,16 +1,14 @@
 module.exports = function (gulp, paths, isRelease) {
-  gulp.task ('ti-scripts', [ 'ti-compile-templates' ], function () {
+  gulp.task ('scripts', [ 'ti-compile-templates' ], function () {
     let babelify = require ('babelify')
     let browserify = require ('browserify')
-    let gulpif = require ('gulp-if')
     let source = require ('vinyl-source-stream')
 
-    return browserify ({ entries : paths.entry, extensions : [ '.js' ], debug : true })
+    return browserify ({ entries : paths.scripts.entry, debug : !isRelease })
       .transform (babelify)
       .bundle ()
       .pipe (source ('ti-ionic.js'))
-      .pipe (gulp.dest (paths.tmp))
-      .pipe (gulpif (isRelease, gulp.dest (paths.dist)))
+      .pipe (gulp.dest (paths.scripts.dist))
   })
 }
 
