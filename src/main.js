@@ -1,17 +1,15 @@
 'use strict'
 
-require ('angular')
-require ('ionic')
+import angular from 'angular'
 
-require ('./modules/dashboard/dashboard')
-require ('./modules/home/home')
-
+// import ionic from 'ionic'
+// import dashboard from './modules/dashboard/dashboard'
+// import home from './modules/home/home'
+// ionic,
+// dashboard,
+// home,
 /* 'ti-ionic' */
 
-module.exports = angular.module ('my-app', [
-  'ionic',
-  'dashboard',
-  'home',
-])
-.config (require ('./router'))
-.run (require ('./run'))
+module.exports = angular.module ('my-app', [])
+  .config (require ('./router'))
+  .run (require ('./run'))

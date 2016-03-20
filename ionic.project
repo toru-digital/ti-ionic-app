@@ -2,7 +2,6 @@
   "name": "tiApp",
   "app_id": "",
   "gulpStartupTasks": [
-    "sass",
     "scripts",
     "watch"
   ],

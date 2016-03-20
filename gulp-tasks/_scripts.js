@@ -7,7 +7,7 @@ module.exports = function (gulp, paths, isRelease) {
     return browserify ({ entries : paths.scripts.entry, debug : !isRelease })
       .transform (babelify)
       .bundle ()
-      .pipe (source ('ti-ionic.js'))
+      .pipe (source ('bundle.js'))
       .pipe (gulp.dest (paths.scripts.dist))
   })
 }

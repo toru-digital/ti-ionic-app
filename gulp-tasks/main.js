@@ -19,7 +19,9 @@ module.exports = function (gulp, isRelease) {
   require ('./_tests') (gulp, paths, isRelease)
 
   gulp.task ('watch', [ 'ti-watch' ], function () {
-    gulp.watch ([ paths.scripts.src, paths.templates, ], [ 'scripts' ])
-    gulp.watch ([ paths.scss.src ], [ 'sass' ])
+    gulp.watch ([ paths.scripts.src ], [ 'scripts' ])
+
+    //, paths.templates
+    //gulp.watch ([ paths.scss.src ], [ 'sass' ])
   })
 }
