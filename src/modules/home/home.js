@@ -1,3 +1,5 @@
-module.exports = angular.module ('my-app.home', [])
+'use-strict'
 
-// 'ti-ionic.utils'
+module.exports = angular.module ('my-app.home', [])
+  .controller ('HomeController', require ('./home-controller'))
+  .config (require ('./router'))
