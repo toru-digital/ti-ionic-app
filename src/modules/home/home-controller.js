@@ -1,18 +1,15 @@
-function HomeController () {
-  console.log ('HELLO')
+class HomeController {
+  constructor ($tiToast) {
+    this.$tiToast = $tiToast
+  }
 
-  // $tiAuth
-  //, $tiToast
-  // $scope
-  // $scope.signout = function ($) {
-  // 	console.log ("I'M HERE");
-  //   $tiAuth.signout ();
-  // };
+  signout () {
+    // $tiAuth.signout ();
+  }
 
-  // $scope.toast = function () {
-  //   $tiToast.say ('HELLO')
-  // }
-
+  toast () {
+    this.$tiToast.say ('FUCK YOU ANGULAR I WIN')
+  }
 }
 
-module.exports = [ HomeController ]
+module.exports = [ '$tiToast', HomeController ]

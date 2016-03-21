@@ -1,7 +1,5 @@
 'use strict'
 
-require ('./home.html')
-
 let Router = function ($stateProvider) {
   $stateProvider.state ('app.home', {
     url : '/home',
@@ -15,10 +13,9 @@ let Router = function ($stateProvider) {
   })
 
   .state ('app.home.index', {
+    controller : 'HomeController as $home',
+    templateUrl : require ('./home.html'),
     url : '/index',
-    controller : 'HomeController',
-    cpmtrollerAs : '$home',
-    templateUrl : 'home.html',
   })
 }
 
