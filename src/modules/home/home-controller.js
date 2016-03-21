@@ -8,7 +8,7 @@ class HomeController {
   }
 
   toast () {
-    this.$tiToast.say ('FUCK YOU ANGULAR I WIN')
+    this.$tiToast.say ('HELLO')
   }
 }
 
